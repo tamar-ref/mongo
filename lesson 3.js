@@ -1,0 +1,14 @@
+//2
+db.catalog.books.find()
+//4
+db.catalog.books.find({name:/java/i},{name});
+//5
+db.catalog.books.find({status:PUBLISH},{name,date,_id});
+//6
+db.catalog.books.find({pages:{$gt:100}},{name,pages,isbn});
+//7
+db.catalog.books.find({name:/C#/i});
+//9
+db.catalog.books.find({$and:[{pages:{$lte:100}},{pages:{$gte:10}}]},{name,pages});
+//10
+db.catalog.books.find({name:/r/i});
